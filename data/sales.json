@@ -1,0 +1,246 @@
+[
+  {
+    "id": "sale-1761580357670",
+    "salesBy": "System Administrator",
+    "outletId": "1761224737580",
+    "date": "2025-10-27",
+    "customer": {
+      "name": "Adrita Ahsan",
+      "mobile": "01745191964",
+      "address": ""
+    },
+    "items": [
+      {
+        "id": 1761580348205,
+        "productId": 1761575188439,
+        "productName": "Toshor-Purple",
+        "size": "",
+        "qty": 1,
+        "price": 1500,
+        "discount": 0,
+        "amount": 1500,
+        "isDefective": false,
+        "defectId": null,
+        "barcode": null
+      }
+    ],
+    "amounts": {
+      "subtotal": 1500,
+      "totalDiscount": 0,
+      "vat": 75,
+      "vatRate": 5,
+      "transportCost": 0,
+      "total": 1575
+    },
+    "payments": {
+      "cash": 1575,
+      "card": 0,
+      "bkash": 0,
+      "nagad": 0,
+      "transactionFee": 0,
+      "totalPaid": 1575,
+      "due": 0
+    },
+    "createdAt": "2025-10-27T15:52:37.670Z"
+  },
+  {
+    "id": "sale-1761580806406",
+    "salesBy": "System Administrator",
+    "outletId": "1761224737580",
+    "date": "2025-10-27",
+    "customer": {
+      "name": "Nishat",
+      "mobile": "01745191965",
+      "address": ""
+    },
+    "items": [
+      {
+        "id": 1761580761728,
+        "productId": 1761575188439,
+        "productName": "Toshor-Purple",
+        "size": "",
+        "qty": 1,
+        "price": 1500,
+        "discount": 0,
+        "amount": 1500,
+        "isDefective": false,
+        "defectId": null,
+        "barcode": "BATCH1761580295386-02"
+      },
+      {
+        "id": 1761580792246,
+        "productId": 1761575188439,
+        "productName": "Toshor-Purple",
+        "size": "",
+        "qty": 1,
+        "price": 1500,
+        "discount": 0,
+        "amount": 1500,
+        "isDefective": false,
+        "defectId": null,
+        "barcode": "BATCH1761580295386-02"
+      }
+    ],
+    "amounts": {
+      "subtotal": 3000,
+      "totalDiscount": 0,
+      "vat": 150,
+      "vatRate": 5,
+      "transportCost": 0,
+      "total": 3150
+    },
+    "payments": {
+      "cash": 3150,
+      "card": 0,
+      "bkash": 0,
+      "nagad": 0,
+      "transactionFee": 0,
+      "totalPaid": 3150,
+      "due": 0
+    },
+    "createdAt": "2025-10-27T16:00:06.406Z"
+  },
+  {
+    "id": "sale-1761581209815",
+    "salesBy": "System Administrator",
+    "outletId": "1761224737580",
+    "date": "2025-10-27",
+    "customer": {
+      "name": "Mrittika Jahan",
+      "mobile": "01745191966",
+      "address": ""
+    },
+    "items": [
+      {
+        "id": 1761581208133.4407,
+        "productId": 1761575188439,
+        "productName": "Toshor-Purple",
+        "size": "",
+        "qty": 1,
+        "price": 1500,
+        "discount": 0,
+        "amount": 1500,
+        "isDefective": false,
+        "defectId": null,
+        "barcodes": [
+          "BATCH1761580295386-03"
+        ]
+      }
+    ],
+    "amounts": {
+      "subtotal": 1500,
+      "totalDiscount": 0,
+      "vat": 75,
+      "vatRate": 5,
+      "transportCost": 0,
+      "total": 1575
+    },
+    "payments": {
+      "cash": 0,
+      "card": 0,
+      "bkash": 0,
+      "nagad": 0,
+      "transactionFee": 0,
+      "totalPaid": 0,
+      "due": 1575
+    },
+    "createdAt": "2025-10-27T16:06:50.142Z",
+    "updatedAt": "2025-10-27T16:06:49.815Z",
+    "exchangeHistory": []
+  },
+  {
+    "id": "sale-1761581344602",
+    "salesBy": "System Administrator",
+    "outletId": "1761224737580",
+    "date": "2025-10-27",
+    "customer": {
+      "name": "Sneha",
+      "mobile": "01746191977",
+      "address": ""
+    },
+    "items": [
+      {
+        "id": 1761581343116.4202,
+        "productId": 1761575188439,
+        "productName": "Toshor-Purple",
+        "size": "",
+        "qty": 2,
+        "price": 1500,
+        "discount": 0,
+        "amount": 3000,
+        "isDefective": false,
+        "defectId": null,
+        "barcodes": [
+          "BATCH1761580295386-04",
+          "BATCH1761580295386-05"
+        ]
+      }
+    ],
+    "amounts": {
+      "subtotal": 3000,
+      "totalDiscount": 0,
+      "vat": 150,
+      "vatRate": 5,
+      "transportCost": 0,
+      "total": 3150
+    },
+    "payments": {
+      "cash": 0,
+      "card": 0,
+      "bkash": 0,
+      "nagad": 0,
+      "transactionFee": 0,
+      "totalPaid": 0,
+      "due": 3150
+    },
+    "createdAt": "2025-10-27T16:09:04.936Z",
+    "updatedAt": "2025-10-27T16:09:04.602Z",
+    "exchangeHistory": []
+  },
+  {
+    "id": "sale-1761583431782",
+    "salesBy": "System Administrator",
+    "outletId": "1761224737580",
+    "date": "2025-10-27",
+    "customer": {
+      "name": "Auhona Ahsan",
+      "mobile": "01745191964",
+      "address": ""
+    },
+    "items": [
+      {
+        "id": 1761583429828.2126,
+        "productId": 1761575188439,
+        "productName": "Toshor-Purple",
+        "size": "",
+        "qty": 1,
+        "price": 100,
+        "discount": 0,
+        "amount": 100,
+        "isDefective": true,
+        "defectId": "defect-1761581272836",
+        "barcode": "BATCH1761580295386-03"
+      }
+    ],
+    "amounts": {
+      "subtotal": 100,
+      "totalDiscount": 0,
+      "vat": 5,
+      "vatRate": 5,
+      "transportCost": 0,
+      "total": 105
+    },
+    "payments": {
+      "cash": 0,
+      "card": 0,
+      "bkash": 0,
+      "nagad": 0,
+      "transactionFee": 0,
+      "totalPaid": 0,
+      "due": 105
+    },
+    "createdAt": "2025-10-27T16:43:52.205Z",
+    "updatedAt": "2025-10-27T16:43:51.782Z",
+    "exchangeHistory": []
+  }
+]

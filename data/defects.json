@@ -1,0 +1,38 @@
+[
+  {
+    "id": "defect-1761581272836",
+    "barcode": "BATCH1761580295386-03",
+    "productId": 1761575188439,
+    "productName": "Toshor-Purple",
+    "status": "sold",
+    "store": "1761224737580",
+    "addedBy": "Admin",
+    "addedAt": "2025-10-27T16:07:52.836Z",
+    "originalOrderId": "sale-1761581209815",
+    "customerPhone": "01745191966",
+    "costPrice": 1200,
+    "originalSellingPrice": 1500,
+    "sellingPrice": 100,
+    "returnReason": "Damaged Product",
+    "image": "/uploads/defect-1761581272729.webp",
+    "soldAt": "2025-10-27T16:43:52.224Z",
+    "updatedAt": "2025-10-27T16:43:52.224Z"
+  },
+  {
+    "id": "defect-1761581383667",
+    "barcode": "BATCH1761580295386-05",
+    "productId": 1761575188439,
+    "productName": "Toshor-Purple",
+    "status": "pending",
+    "store": "1761224737580",
+    "addedBy": "Admin",
+    "addedAt": "2025-10-27T16:09:43.667Z",
+    "originalOrderId": "sale-1761581344602",
+    "customerPhone": "01746191977",
+    "costPrice": 1200,
+    "originalSellingPrice": 1500,
+    "sellingPrice": null,
+    "returnReason": "Moila",
+    "image": "/uploads/defect-1761581383664.jpeg"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1761224712010,
+    "name": "Uttara",
+    "location": "Uttara,Dhaka",
+    "type": "store",
+    "pathao_key": "UTT123",
+    "revenue": 60000,
+    "revenueChange": 1500,
+    "products": 70,
+    "orders": 20,
+    "isOnline": true
+  },
+  {
+    "id": 1761224737580,
+    "name": "Banasree",
+    "location": "Dhaka,Banagladesh",
+    "type": "warehouse",
+    "pathao_key": "BAN123",
+    "revenue": 60000,
+    "revenueChange": 1500,
+    "products": 70,
+    "orders": 20,
+    "isOnline": true
+  }
+]

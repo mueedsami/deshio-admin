@@ -1,0 +1,109 @@
+{
+  "categories": [],
+  "transactions": [
+    {
+      "id": "txn-batch-1761580295386",
+      "name": "Inventory Purchase - Batch BATCH1761580295386",
+      "description": "Purchased 5 units @ ৳1200 each",
+      "type": "expense",
+      "amount": 6000,
+      "category": "Inventory Purchase",
+      "date": "2025-10-27T15:51:35.389Z",
+      "comment": "Expected Revenue: ৳7500, Expected Profit: ৳1500",
+      "createdAt": "2025-10-27T15:51:35.389Z",
+      "source": "batch",
+      "referenceId": "1761580295386"
+    },
+    {
+      "id": "txn-sale-sale-1761580357670",
+      "name": "Sale: Toshor-Purple",
+      "description": "POS Sale to Adrita Ahsan",
+      "type": "income",
+      "amount": 1575,
+      "category": "POS Sales",
+      "date": "2025-10-27T15:52:37.670Z",
+      "comment": "Items: 1, Cash: ৳1575, Card: ৳0, Bkash: ৳0, Nagad: ৳0, Due: ৳0",
+      "createdAt": "2025-10-27T15:52:37.678Z",
+      "source": "sale",
+      "referenceId": "sale-1761580357670"
+    },
+    {
+      "id": "txn-sale-sale-1761580806406",
+      "name": "Sale: Toshor-Purple +1 more",
+      "description": "POS Sale to Nishat",
+      "type": "income",
+      "amount": 3150,
+      "category": "POS Sales",
+      "date": "2025-10-27T16:00:06.406Z",
+      "comment": "Items: 2, Cash: ৳3150, Card: ৳0, Bkash: ৳0, Nagad: ৳0, Due: ৳0",
+      "createdAt": "2025-10-27T16:00:06.411Z",
+      "source": "sale",
+      "referenceId": "sale-1761580806406"
+    },
+    {
+      "id": "txn-sale-sale-1761581209815",
+      "name": "Sale: Toshor-Purple",
+      "description": "POS Sale to Mrittika Jahan",
+      "type": "income",
+      "amount": 1575,
+      "category": "POS Sales",
+      "date": "2025-10-27T16:06:50.142Z",
+      "comment": "Items: 1, Cash: ৳0, Card: ৳0, Bkash: ৳0, Nagad: ৳0, Due: ৳1575",
+      "createdAt": "2025-10-27T16:06:50.148Z",
+      "source": "sale",
+      "referenceId": "sale-1761581209815"
+    },
+    {
+      "id": "txn-sale-sale-1761581344602",
+      "name": "Sale: Toshor-Purple",
+      "description": "POS Sale to Sneha",
+      "type": "income",
+      "amount": 3150,
+      "category": "POS Sales",
+      "date": "2025-10-27T16:09:04.936Z",
+      "comment": "Items: 1, Cash: ৳0, Card: ৳0, Bkash: ৳0, Nagad: ৳0, Due: ৳3150",
+      "createdAt": "2025-10-27T16:09:04.941Z",
+      "source": "sale",
+      "referenceId": "sale-1761581344602"
+    },
+    {
+      "id": "txn-batch-1761581506527",
+      "name": "Inventory Purchase - Batch BATCH1761581506527",
+      "description": "Purchased 5 units @ ৳1200 each",
+      "type": "expense",
+      "amount": 6000,
+      "category": "Inventory Purchase",
+      "date": "2025-10-27T16:11:46.529Z",
+      "comment": "Expected Revenue: ৳6500, Expected Profit: ৳500",
+      "createdAt": "2025-10-27T16:11:46.529Z",
+      "source": "batch",
+      "referenceId": "1761581506527"
+    },
+    {
+      "id": "txn-order-1761581624068",
+      "name": "Order: Katha Stich",
+      "description": "Social Order from Customer",
+      "type": "income",
+      "amount": 1365,
+      "category": "Online Orders",
+      "date": "2025-10-27T16:13:44.073Z",
+      "comment": "Platform: Social Media, Products: 1, Cash: ৳0, Bkash: ৳0, Due: ৳1365",
+      "createdAt": "2025-10-27T16:13:44.076Z",
+      "source": "order",
+      "referenceId": "1761581624068"
+    },
+    {
+      "id": "txn-sale-sale-1761583431782",
+      "name": "Sale: Toshor-Purple",
+      "description": "POS Sale to Auhona Ahsan",
+      "type": "income",
+      "amount": 105,
+      "category": "POS Sales",
+      "date": "2025-10-27T16:43:52.205Z",
+      "comment": "Items: 1, Cash: ৳0, Card: ৳0, Bkash: ৳0, Nagad: ৳0, Due: ৳105",
+      "createdAt": "2025-10-27T16:43:52.235Z",
+      "source": "sale",
+      "referenceId": "sale-1761583431782"
+    }
+  ]
+}

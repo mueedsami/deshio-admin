@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1761581624068,
+    "salesBy": "System Administrator",
+    "date": "06-Oct-2025",
+    "customer": {
+      "name": "Preownti",
+      "email": "preownti@gmail.com",
+      "phone": "01745191988",
+      "socialId": "Nishat Preownti"
+    },
+    "deliveryAddress": {
+      "division": "Rajshahi",
+      "district": "Rajshahi",
+      "city": "Mohonpur",
+      "zone": "Mohonpur",
+      "area": "",
+      "address": "",
+      "postalCode": ""
+    },
+    "products": [
+      {
+        "id": 1761581619306,
+        "productId": 1761581478031,
+        "batchId": 1761581506527,
+        "productName": "Katha Stich",
+        "size": "1",
+        "qty": 1,
+        "price": 1300,
+        "discount": 0,
+        "amount": 1300,
+        "barcodes": [
+          "BATCH1761581506527-01"
+        ]
+      }
+    ],
+    "subtotal": 1300,
+    "amounts": {
+      "subtotal": 1300,
+      "totalDiscount": 0,
+      "vat": 65,
+      "vatRate": 5,
+      "transportCost": 0,
+      "total": 1365
+    },
+    "payments": {
+      "sslCommerz": 0,
+      "advance": 0,
+      "transactionId": "",
+      "totalPaid": 0,
+      "due": 1365
+    },
+    "createdAt": "2025-10-27T16:13:44.073Z"
+  }
+]

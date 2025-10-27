@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1761225034411,
+    "name": "Description",
+    "type": "Text",
+    "mode": "Multiple"
+  },
+  {
+    "id": 1761225284792,
+    "name": "color",
+    "type": "Text",
+    "mode": "Multiple"
+  },
+  {
+    "id": 1761225297907,
+    "name": "Size",
+    "type": "Text",
+    "mode": "Multiple"
+  }
+]

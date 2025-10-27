@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1761575188439,
+    "name": "Toshor-Purple",
+    "attributes": {
+      "mainImage": "/uploads/1761575125348-PBU1303-8.webp",
+      "category": "1",
+      "subcategory": "",
+      "Description": "Regular Wear",
+      "groupMainImage": "/uploads/1761575098760-PBU1303-8.webp",
+      "color": "Purple",
+      "size": "",
+      "variationImages": [
+        "/uploads/1761575125348-PBU1303-8.webp",
+        "/uploads/1761575150031-PBU1305-5a.webp"
+      ]
+    }
+  },
+  {
+    "id": 1761575188441,
+    "name": "Toshor-Red",
+    "attributes": {
+      "mainImage": "/uploads/1761575166570-PBU1305-7.webp",
+      "category": "1",
+      "subcategory": "",
+      "Description": "Regular Wear",
+      "groupMainImage": "/uploads/1761575098760-PBU1303-8.webp",
+      "color": "Red",
+      "size": "",
+      "variationImages": [
+        "/uploads/1761575166570-PBU1305-7.webp"
+      ]
+    }
+  },
+  {
+    "id": 1761581478031,
+    "name": "Katha Stich",
+    "attributes": {
+      "mainImage": "/uploads/1761581467451-0146a3b4c4d686615d1c2dbe34f42d9e.webp",
+      "category": "1",
+      "subcategory": "",
+      "color": "Pink"
+    }
+  }
+]

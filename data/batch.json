@@ -1,0 +1,20 @@
+[
+  {
+    "productId": 1761575188439,
+    "costPrice": 1200,
+    "sellingPrice": 1500,
+    "quantity": 5,
+    "admitted": "yes",
+    "id": 1761580295386,
+    "baseCode": "BATCH1761580295386"
+  },
+  {
+    "productId": 1761581478031,
+    "costPrice": 1200,
+    "sellingPrice": 1300,
+    "quantity": 5,
+    "admitted": "yes",
+    "id": 1761581506527,
+    "baseCode": "BATCH1761581506527"
+  }
+]
