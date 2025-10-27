@@ -2,7 +2,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 
@@ -17,8 +17,7 @@ interface DefectItem {
 
 export default function SellDefectPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const defectId = searchParams.get('id');
+  const [defectId, setDefectId] = useState<string | null>(null);
   
   const [darkMode, setDarkMode] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -28,6 +27,13 @@ export default function SellDefectPage() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    // read search params from window at runtime to avoid calling useSearchParams
+    // during prerender which causes a build error
+    if (!defectId && typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      if (id) setDefectId(id);
+    }
     if (defectId) {
       fetchDefect();
     }

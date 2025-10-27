@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { Phone, Package, Search, X, Scan, CheckCircle2, AlertCircle } from 'lucide-react';
 import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
-import { useSearchParams } from 'next/navigation';
 
 interface Product {
   productId: number;
@@ -42,8 +41,14 @@ interface Toast {
 }
 
 export default function OutletManageStockPage() {
-  const searchParams = useSearchParams();
-  const storeId = searchParams.get('storeId');
+  const [storeId, setStoreId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (storeId === null && typeof window !== 'undefined') {
+      const id = new URLSearchParams(window.location.search).get('storeId');
+      setStoreId(id);
+    }
+  }, [storeId]);
   
   const [darkMode, setDarkMode] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);

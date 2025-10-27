@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
 import { ArrowLeft, Save, ChevronDown } from 'lucide-react';
@@ -9,11 +9,18 @@ import Link from 'next/link';
 
 export default function AddStorePage() {
   const [darkMode, setDarkMode] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isTypeOpen, setIsTypeOpen] = useState(false);
 
-  const searchParams = useSearchParams();
   const router = useRouter();
-  const editId = searchParams.get('id'); // if provided → edit mode
+  const [editId, setEditId] = useState<string | null>(null); // if provided → edit mode
+
+  // Read the id from URL when component mounts
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const id = new URLSearchParams(window.location.search).get('id');
+    if (id) setEditId(id);
+  }, []);
 
   const [formData, setFormData] = useState({
     id: '',
@@ -83,9 +90,13 @@ export default function AddStorePage() {
   return (
     <div className={darkMode ? 'dark' : ''}>
       <div className="flex h-screen bg-gray-50 dark:bg-gray-900">
-        <Sidebar />
+        <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
         <div className="flex-1 flex flex-col">
-          <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Header 
+            darkMode={darkMode} 
+            setDarkMode={setDarkMode}
+            toggleSidebar={() => setSidebarOpen(!sidebarOpen)} 
+          />
           <main className="flex-1 overflow-auto p-6">
             <div className="max-w-xl mx-auto">
               <div className="mb-4">

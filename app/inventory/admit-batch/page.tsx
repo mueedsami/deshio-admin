@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Scan, CheckCircle, X, AlertCircle, CheckCircle2 } from 'lucide-react';
 import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 interface Batch {
   id: number;
@@ -23,8 +23,14 @@ interface Toast {
 
 export default function AdmitBatchPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const batchId = searchParams.get('batchId');
+  const [batchId, setBatchId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (batchId === null && typeof window !== 'undefined') {
+      const id = new URLSearchParams(window.location.search).get('batchId');
+      setBatchId(id);
+    }
+  }, [batchId]);
   
   const [darkMode, setDarkMode] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);

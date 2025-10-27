@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import BatchForm from '@/components/BatchForm';
@@ -26,7 +26,11 @@ interface Batch {
 
 export default function BatchPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
+
+  const getSearchParam = (key: string) => {
+    if (typeof window === 'undefined') return null;
+    return new URLSearchParams(window.location.search).get(key);
+  };
 
   const [darkMode, setDarkMode] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -41,25 +45,26 @@ export default function BatchPage() {
 
   // Read URL parameters when redirected back from product selection
   useEffect(() => {
-    const pid = searchParams?.get('productId');
-    const pname = searchParams?.get('productName');
-    const parentPid = searchParams?.get('parentProductId');
-    
+    if (typeof window === 'undefined') return;
+    const pid = getSearchParam('productId');
+    const pname = getSearchParam('productName');
+    const parentPid = getSearchParam('parentProductId');
+
     console.log('URL Parameters:', { pid, pname, parentPid }); // Debug log
-    
+
     if (pid) {
       // Check if it's a number or string (variation ID)
       const parsedId = isNaN(Number(pid)) ? pid : Number(pid);
       console.log('Parsed Product ID:', parsedId); // Debug log
       setSelectedProductId(parsedId);
     }
-    
+
     if (pname) {
       const decodedName = decodeURIComponent(pname);
       console.log('Product Name:', decodedName); // Debug log
       setSelectedProductName(decodedName);
     }
-  }, [searchParams]);
+  }, []);
 
   useEffect(() => {
     (async () => {
@@ -86,7 +91,7 @@ export default function BatchPage() {
       return;
     }
 
-    const parentProductId = searchParams?.get('parentProductId');
+  const parentProductId = getSearchParam('parentProductId');
 
     const body = {
       productId: selectedProductId, // This will be variation ID if variation was selected
@@ -137,9 +142,15 @@ export default function BatchPage() {
   };
 
   // Find selected product - could be by ID or use the name from URL
-  const selectedProduct = selectedProductId 
+  const rawSelectedProduct = selectedProductId 
     ? products.find(p => String(p.id) === String(selectedProductId)) || { id: selectedProductId, name: selectedProductName }
     : undefined;
+    
+  // Convert to BatchForm's Product type where id must be a number
+  const selectedProduct = rawSelectedProduct ? {
+    ...rawSelectedProduct,
+    id: typeof rawSelectedProduct.id === 'string' ? parseInt(rawSelectedProduct.id, 10) : rawSelectedProduct.id
+  } : undefined;
 
   return (
     <div className={`${darkMode ? 'dark' : ''} flex h-screen`}>
@@ -168,12 +179,24 @@ export default function BatchPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {batches.map(batch => {
-              const product = products.find(p => String(p.id) === String(batch.productId));
+              // Convert batch to match BatchCard's expected type
+              const normalizedBatch = {
+                ...batch,
+                productId: typeof batch.productId === 'string' ? parseInt(batch.productId, 10) : batch.productId
+              };
+
+              // Find and convert product to match BatchCard's expected type
+              const rawProduct = products.find(p => String(p.id) === String(batch.productId));
+              const normalizedProduct = rawProduct ? {
+                ...rawProduct,
+                id: typeof rawProduct.id === 'string' ? parseInt(rawProduct.id, 10) : rawProduct.id
+              } : undefined;
+
               return (
                 <BatchCard 
                   key={batch.id} 
-                  batch={batch} 
-                  product={product}
+                  batch={normalizedBatch} 
+                  product={normalizedProduct}
                   onDelete={handleDeleteBatch}
                 />
               );

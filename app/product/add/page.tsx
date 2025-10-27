@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { Plus, X, Upload, Trash2 } from 'lucide-react';
 import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
@@ -43,9 +43,15 @@ interface VariationData {
 // --- Component -------------------------------------------------------------
 export default function AddEditProductPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const productId = searchParams.get('id');
+  const [productId, setProductId] = useState<string | null>(null);
   const isEditMode = !!productId;
+
+  useEffect(() => {
+    if (productId === null && typeof window !== 'undefined') {
+      const id = new URLSearchParams(window.location.search).get('id');
+      setProductId(id);
+    }
+  }, [productId]);
 
   const [darkMode, setDarkMode] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);

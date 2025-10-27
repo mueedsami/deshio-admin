@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import {
   Plus,
   Search,
@@ -35,11 +35,19 @@ interface Category {
 
 export default function ProductPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const selectMode = searchParams.get('selectMode') === 'true';
-  const redirectPath = searchParams.get('redirect') || '';
+  const [selectMode, setSelectMode] = useState(false);
+  const [redirectPath, setRedirectPath] = useState('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      setSelectMode(params.get('selectMode') === 'true');
+      setRedirectPath(params.get('redirect') || '');
+    }
+  }, []);
   
   const [darkMode, setDarkMode] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [products, setProducts] = useState<Product[]>([]);
   const [fields, setFields] = useState<Field[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -184,9 +192,13 @@ export default function ProductPage() {
   return (
     <div className={darkMode ? 'dark' : ''}>
       <div className="flex h-screen bg-gray-50 dark:bg-gray-900">
-        <Sidebar />
+        <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
         <div className="flex-1 flex flex-col">
-          <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Header 
+            darkMode={darkMode} 
+            setDarkMode={setDarkMode}
+            toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
+          />
 
           <main className="flex-1 overflow-auto p-6">
             {/* Header Section */}

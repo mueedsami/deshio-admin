@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import { ArrowLeft, Edit, Trash2 } from 'lucide-react';
@@ -39,8 +39,20 @@ interface Category {
 
 export default function ProductViewPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const productId = searchParams.get('id');
+  const [productId, setProductId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (productId === null && typeof window !== 'undefined') {
+      const id = new URLSearchParams(window.location.search).get('id');
+      setProductId(id);
+      return;
+    }
+
+    if (productId === '') {
+      router.push('/product');
+      return;
+    }
+  }, [productId, router]);
   
   const [darkMode, setDarkMode] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -196,6 +208,8 @@ export default function ProductViewPage() {
 
   // Fetch product data and related products
   useEffect(() => {
+    if (productId === null) return; // wait until we read the param from the browser
+
     if (!productId) {
       router.push('/product');
       return;
